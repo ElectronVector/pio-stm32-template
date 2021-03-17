@@ -1,0 +1,25 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Host tests",
+            "type": "shell",
+            "command": "~/.platformio/penv/bin/pio test -e host",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "Target tests",
+            "type": "shell",
+            "command": "~/.platformio/penv/bin/pio test -e target",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": "test"
+        }
+    ]
+}
