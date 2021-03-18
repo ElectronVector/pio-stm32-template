@@ -4,22 +4,38 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Path",
+            "type": "shell",
+            "command": "echo ${env:PATH}",
+            "problemMatcher": []
+        },
+        {
             "label": "Host tests",
             "type": "shell",
-            "command": "${env:HOME}/.platformio/penv/bin/pio test -e host",
+            "command": "pio test -e host",
             "problemMatcher": [
                 "$platformio"
             ],
-            "group": "test"
+            "group": "test",
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:${env:HOME}/.platformio/penv/bin:${env:HOME}/.platformio/penv/Scripts"
+                }
+            }
         },
         {
             "label": "Target tests",
             "type": "shell",
-            "command": "${env:HOME}/.platformio/penv/bin/pio test -e target",
+            "command": "pio test -e target",
             "problemMatcher": [
                 "$platformio"
             ],
-            "group": "test"
+            "group": "test",
+            "options": {
+                "env": {
+                    "PATH": "${env:PATH}:${env:HOME}/.platformio/penv/bin:${env:HOME}/.platformio/penv/Scripts"
+                }
+            }
         }
     ]
 }
