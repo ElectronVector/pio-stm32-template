@@ -6,7 +6,7 @@
         {
             "label": "Host tests",
             "type": "shell",
-            "command": "pio test -e host",
+            "command": "platformio test -e host",
             "problemMatcher": [
                 "$platformio"
             ],
@@ -20,7 +20,7 @@
         {
             "label": "Target tests",
             "type": "shell",
-            "command": "pio test -e target",
+            "command": "platformio test -e target",
             "problemMatcher": [
                 "$platformio"
             ],
